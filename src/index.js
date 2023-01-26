@@ -10,8 +10,13 @@ class App extends React.Component {
         const x = tf.tensor2d([[Math.random(), Math.random()],
                                [Math.random(), Math.random()]])
 
+        const be = tf.getBackend();
+
         return (
-            <div>{"x = " + x}</div>
+            <div>
+                <div>{"x = " + x}</div>,
+                <div>{"devices = " + be}</div>
+            </div>
         );
     }
 }
